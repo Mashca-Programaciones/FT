@@ -1,35 +1,4 @@
-<?php
-require_once './core/forced.php';
-$codigo_cuenta=$_SESSION['codigo_gad'];
-$consulta="SELECT *,T1.cuentacodigo FROM cuenta as T1, estado_cuenta as T2, roles as T3, privilegios as T4, modulo as T5 WHERE T1.cuentacodigo='$codigo_cuenta' AND T1.estadocuentacodigo=T2.estadocuentacodigo AND T1.codigoroles=T3.codigoroles AND T3.codigoroles=T4.codigoroles AND T4.modulocodigo=T5.modulocodigo";
-
-$conexion = forced::conectar();
-
-$datos = $conexion->query($consulta);
-$datos= $datos->fetchAll();
-?>
-
-
-<?php
-$contador=0;
-$numerosencadena1 = "";
-foreach ($datos as $rows) {
-    $contador=$contador+1;
-
-    //$zinc=forced::encryption($rows['modulocodigo']);
-    $zinc=trim($rows['modulonombre']);
-
-    ?>
-
-
-
-    <!--<a href=""><?php echo $rows['modulonombre'] ?></a>-->
-
-
-    <?php 
-    $numerosencadena1 .=$zinc."*";
-} 
-?>
+¿
 
 
 
@@ -48,14 +17,6 @@ foreach ($datos as $rows) {
 
 
 
-            <?php
-
-            $arreglo_cadena_detalles = explode("*", $numerosencadena1);
-
-            for ($i=0; $i <count($arreglo_cadena_detalles) ; $i++) { 
-
-                if ($arreglo_cadena_detalles[$i]=="Empresa") {
-                    ?>
                     <li><a><i class="fa fa-institution"></i> Empresa <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<?php echo SERVERURL; ?>municipio/">Empresa</a></li>
@@ -63,23 +24,14 @@ foreach ($datos as $rows) {
                             <li><a href="<?php echo SERVERURL; ?>cargos/">Cargos</a></li>
                         </ul>
                     </li>
-                    <?php
-                }
-
-                if ($arreglo_cadena_detalles[$i]=="Personal") {
-                    ?>
+ 
                     <li><a><i class="fa fa-users"></i> Personal <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="<?php echo SERVERURL; ?>empleados/">Empleados</a></li>
                             <li><a href="<?php echo SERVERURL; ?>estadosEmpleado/">Estados empleado</a></li>
                         </ul>
                     </li>
-                    <?php
-                }
 
-
-                if ($arreglo_cadena_detalles[$i]=="Ingresos") {
-                    ?>
                     <li><a><i class="fa fa-sign-in"></i> Ingresos <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a>Informes de Ingreso de Hardware<span class="fa fa-chevron-down"></span></a>
@@ -107,11 +59,7 @@ foreach ($datos as $rows) {
                             <li><a href="<?php echo SERVERURL; ?>estadosHardwareasignacion/">Estados de re/asignación</a></li>
                         </ul>
                     </li>
-                    <?php
-                }
 
-                if ($arreglo_cadena_detalles[$i]=="Re / Asignacion") {
-                    ?>
                     <li><a><i class="fa fa-sign-out"></i> Re / Asignación <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a>Asignación<span class="fa fa-chevron-down"></span></a>
@@ -133,11 +81,7 @@ foreach ($datos as $rows) {
 
                         </ul>
                     </li>
-                    <?php
-                }
-
-                if ($arreglo_cadena_detalles[$i]=="Mantenimiento") {
-                    ?>
+ 
                     <li><a><i class="fa fa-bar-chart-o"></i> Mantenimiento <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a>Gestionar Mantenimiento<span class="fa fa-chevron-down"></span></a>
@@ -154,11 +98,7 @@ foreach ($datos as $rows) {
                             <li><a href="<?php echo SERVERURL; ?>estadosMantenimiento/">Estados de Mantenimiento</a></li>
                         </ul>
                     </li>
-                    <?php
-                }
 
-                if ($arreglo_cadena_detalles[$i]=="Administrador") {
-                   ?>
                    <li><a><i class="fa fa-user"></i> Administradores <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="<?php echo SERVERURL; ?>administrador/">Administrador</a></li>
@@ -166,27 +106,14 @@ foreach ($datos as $rows) {
                         <li><a href="<?php echo SERVERURL; ?>estadosAdministrador/">Estados del administrador</a></li>
                     </ul>
                 </li>
-                <?php
-            }
 
-
-
-            if ($arreglo_cadena_detalles[$i]=="Accesos") {
-                ?>
                 <li><a><i class="fa fa-windows"></i> Accesos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="<?php echo SERVERURL; ?>roles/">Roles</a></li>
                         <li><a href="<?php echo SERVERURL; ?>modulos/">Modulos</a></li>
                     </ul>
                 </li>
-                <?php
-            }
 
-
-        }
-
-
-        ?>
 
     </div>
 </div>
