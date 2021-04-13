@@ -279,9 +279,6 @@
 							<th>TÉLEFONO</th>
 							<th>CELULAR</th>
 							<th>CORREO</th>
-							<th>DEPARTAMENTO</th>
-							<th>CARGO</th>
-							<th>ESTADO</th>
 							<th>FECHA</th>
 							
 			';
@@ -314,9 +311,6 @@
 							<td>'.$rows['empleadocelular'].'</td>
 							<td>'.$rows['empleadocorreo'].'</td>
 							
-							<td>'.$rows['departamentonombre'].'</td>
-							<td>'.$rows['cargonombre'].'</td>
-							<td>'.$rows['estadoempleadonombre'].'</td>
 							<td>'.$rows['empleadofecha'].'</td>
 							';
 						//if ($privilegio<=2) {
@@ -331,7 +325,7 @@
 
 								<form method="POST" action="'.SERVERURL.'hardwareinfo/">
 								<input type="hidden" value="'.($a).'" name="codigo">
-								<button style="font-size:15px; borderbox:0px; width:100px;" type="submit" class="btn btn-secondary"> Hardware</button>
+								<button style="font-size:15px; borderbox:0px; width:100px;" type="submit" class="btn btn-secondary"> Ventas</button>
 								</form> 
                                               
 							</td>

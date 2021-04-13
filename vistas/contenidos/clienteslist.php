@@ -1,7 +1,7 @@
                     <div class="">
                       <div class="x_panel">
                         <div class="x_title">
-                          <h2>Listado de empleados <small></small></h2>
+                          <h2>Listado de clientes <small></small></h2>
                                <!--<a href="formAgregarSocio.php" class="btn btn-success pull-right"><i
                                 class="fa fa-credit-card"></i> Nuevo Socio</a>-->
                                 <div class="clearfix"></div>

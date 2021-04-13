@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>GAD - Procesos de Control de Hardware</title>
+    <title>El Mundo del Jean</title>
     <link rel="icon" href="<?php echo SERVERURL; ?>vistas/contenidos/images/descargar.jpg">
     <!-- Bootstrap -->
     <link href="<?php echo SERVERURL; ?>vistas/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -85,7 +85,7 @@ else:
                 <div class="col-md-3 left_col">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
-                            <a href="<?php echo SERVERURL; ?>home/"" class="site_title"><i class="fa fa-laptop"></i> <span>Mundo Jeans!</span></a>
+                            <a href="<?php echo SERVERURL; ?>home/"" class="site_title"><i class="fa fa-laptop"></i> <span>El Mundo Jean!</span></a>
                         </div>
 
                         <div class="clearfix"></div>

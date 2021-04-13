@@ -2,7 +2,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Procesos de Control de Hardware</h3>
+                <h3>El Mundo del Jean</h3>
             </div>
 
             <!--<div class="title_right">
@@ -22,7 +22,7 @@
             <div class="col-md-12 col-sm-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Sección Empleados <small></small></h2>
+                        <h2>Sección Clientes <small></small></h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
@@ -50,12 +50,12 @@
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <?php require_once 'empleadoslist.php' ?>
+                            <?php require_once 'clienteslist.php' ?>
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
 
-                            <?php require_once 'empleadosagregar.php' ?>
+                            <?php require_once 'clientesagregar.php' ?>
 
 
                         </div>

@@ -41,7 +41,7 @@
 
       <div class="x_panel">
         <div class="x_title">
-          <h2>Agregar nuevo empleado <small></small></h2>
+          <h2>Agregar nuevo cliente <small></small></h2>
               <!--<ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -60,82 +60,13 @@
             <div class="x_content"><br>
 
               <form action="<?php echo SERVERURL; ?>ajax/empleadosAjax.php" method="POST" data-form="save" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
-                <h6 class="StepTitle">Información general</h6><br>
-                <div class="row">
-
-                  <div class="col-md-4 col-sm-12  form-group">
-                   <label class="label-align">Selecciones Entidad<span class="required">:</span></label>           
-                   <div class="">
-                     <?php
-                                //require_once "./controladores/empleadosControlador.php";
-                     $iEs= new empleadosControlador();
-                     $cEs=$iEs->datos_empleados_controlador("SelectEmpresa",0);
-                     ?>
-                     <select class="form-control" name="emp-reg" onchange="cargarDep(this)" placeholder="">
-                      <?php
-                      while($campos=$cEs->fetch()){
-                        ?>
-                        <option value="<?php echo $campos['empresacodigo']; ?>">
-                          <?php echo $campos['empresanombre']; ?>
-                        </option>
-                        <?php
-                      } 
-                      
-                      ?>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-12  form-group">
-                 <label class="label-align">Seleccione Departamento<span class="required">:</span></label>           
-                 <div id="divDep" class="">
-                  <?php
-                                //require_once "./controladores/empleadosControlador.php";
-                  $iEs= new empleadosControlador();
-                  $cEs=$iEs->datos_empleados_controlador("SelectDep",0);
-                  ?>
-                  <select class="form-control" name="dep-reg" onchange="cargarCargo(this)" placeholder="">
-                    <?php
-                    while($campos=$cEs->fetch()){
-                      ?>
-                      <option value="<?php echo $campos['departamentocodigo']; ?>">
-                        <?php echo $campos['departamentonombre']; ?>
-                      </option>
-                      <?php
-                    } 
-                    
-                    ?>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-12  form-group">
-               <label class="label-align">Seleccione Cargo<span class="required">:</span></label>           
-               <div id="divCargo" class="">
-                <?php
-                                //require_once "./controladores/empleadosControlador.php";
-                $iEs= new empleadosControlador();
-                $cEs=$iEs->datos_empleados_controlador("SelectCargos",0);
-                ?>
-                <select class="form-control" name="car-reg" placeholder="">
-                  <?php
-                  while($campos=$cEs->fetch()){
-                    ?>
-                    <option value="<?php echo $campos['cargocodigo']; ?>">
-                      <?php echo $campos['cargonombre']; ?>
-                    </option>
-                    <?php
-                  } 
-                  
-                  ?>
-                </select>
-              </div>
-            </div>
-          </div> <br>
+  
 
 
 
 
-          <!--                   CUENTA                       -->
-          <h6 class="StepTitle">Información del empleado</h6><br>
+          <!--                   CUENTA                      
+          <h6 class="StepTitle">Información del empleado</h6><br> -->
           <div class="row">
             <div class="col-md-4 col-sm-12  form-group">
               <label class="label-align">Cédula<span class="required">:</span></label>
@@ -168,28 +99,7 @@
               <input class="form-control" class='date' type="date" name="fecha-reg" >
             </div>
 
-            <div class="col-md-4 col-sm-12  form-group">
-              <label class="label-align">Seleccione Estado<span class="required">:</span></label>           
-              <div id="" class="">
-                <?php
-                            //require_once "./controladores/empleadosControlador.php";
-                $iEs= new empleadosControlador();
-                $cEs=$iEs->datos_empleados_controlador("Estados",0);
-                ?>
-                <select class="form-control" name="estado-reg" placeholder="">
-                  <?php
-                  while($campos=$cEs->fetch()){
-                    ?>
-                    <option value="<?php echo $campos['estadoempleadocodigo']; ?>">
-                      <?php echo $campos['estadoempleadonombre']; ?>
-                    </option>
-                    <?php
-                  } 
-                  
-                  ?>
-                </select>
-              </div>
-            </div>
+          
 
           </div><br>
 
