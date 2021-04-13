@@ -23,10 +23,48 @@
             </ul>
 
 
+
+            <br>
+
+            <h3>Ventas</h3>
+   
+        <ul class="nav side-menu">
+       
+                    
+                    <li><a><i class="fa fa-users"></i> Inventario <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="<?php echo SERVERURL; ?>plancuentas/">Facturación</a></li>
+                            <li><a href="<?php echo SERVERURL; ?>plancuentas/">Retenciones</a></li>
+                            <li><a href="<?php echo SERVERURL; ?>plancuentas/">Clientes</a></li>
+                        </ul>
+                    </li>
+            </ul>
+
+
+
 <br>
 
-            <h3>Modulos Contabilidad</h3>
+            <h3>Inventario</h3>
+            
+        <ul class="nav side-menu">
+       
+                    
+                    <li><a><i class="fa fa-users"></i> Inventario <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="<?php echo SERVERURL; ?>plancuentas/">Articulo</a></li>
+                            <li><a href="<?php echo SERVERURL; ?>plancuentas/">Cardex</a></li>
+                        </ul>
+                    </li>
+            </ul>
+
+
+
+
+
             <br>
+
+            <h3>Modulos Contabilidad</h3>
+
         <ul class="nav side-menu">
        
                     
@@ -61,33 +99,7 @@
                         </ul>
                     </li>
 
-                    <li><a><i class="fa fa-users"></i> Personal <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="<?php echo SERVERURL; ?>empleados/">Empleados</a></li>
-                            <li><a href="<?php echo SERVERURL; ?>estadosEmpleado/">Estados empleado</a></li>
-                        </ul>
-                    </li>
-
- 
-
                    
- 
-                    
-
-                   <li><a><i class="fa fa-user"></i> Administradores <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="<?php echo SERVERURL; ?>administrador/">Administrador</a></li>
-                        <!--<li><a href="<?php echo SERVERURL; ?>perfil/">Perfil de usuario</a></li>-->
-                        <li><a href="<?php echo SERVERURL; ?>estadosAdministrador/">Estados del administrador</a></li>
-                    </ul>
-                </li>
-
-                <li><a><i class="fa fa-windows"></i> Accesos <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="<?php echo SERVERURL; ?>roles/">Roles</a></li>
-                        <li><a href="<?php echo SERVERURL; ?>modulos/">Modulos</a></li>
-                    </ul>
-                </li>
 
             </ul>
 
