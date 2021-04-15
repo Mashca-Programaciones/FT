@@ -36,7 +36,7 @@
 
             <li><a><i class="fa fa-users"></i> Ventas <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="<?php echo SERVERURL; ?>plancuentas/">Facturación</a></li>
+                    <li><a href="<?php echo SERVERURL; ?>facturacion/">Facturación</a></li>
                     <li><a href="<?php echo SERVERURL; ?>plancuentas/">Retenciones</a></li>
                     <li><a href="<?php echo SERVERURL; ?>clientes/">Clientes</a></li>
                 </ul>
