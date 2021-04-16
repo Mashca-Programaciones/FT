@@ -80,7 +80,6 @@
                           <div class="col-sm-12 emphasis">
                             <!--<button type="button" class="btn btn-primary btn-sm"> <i class="fa fa-user">
                             </i> <i class="fa fa-comments-o"></i> Empleado</button>-->
-                            
                             <form method="POST" action="<?php echo SERVERURL; ?>empleadosinfo/">
                               <input type="hidden" value="<?php echo trim($rows['empleadocodigo']); ?>" name="codigo">
                               <button type="submit" class="btn btn-primary btn-sm"> <i class="fa fa-user" style="display:inline">

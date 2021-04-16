@@ -1,9 +1,3 @@
-<?php 
-require_once "./funcs/captcha.php";
-$errors = array();
-$secret = SECRET_C;
-$page = PAGE;
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,26 +31,11 @@ $page = PAGE;
     <div class="login_wrapper">
       <div class="animate form login_form">
         <section class="login_content">
-          <img src="<?php echo SERVERURL; ?>vistas/contenidos/images/Gad.png"  style=" width: 150px height: 900px" class="logo_1"> 
+          <img src="<?php echo SERVERURL; ?>vistas/contenidos/images/Gad.png"  style=" width: 150px height: 900px" class="logo_1">
           <br>
           <br>
           <?php
-          if(!empty($_POST))
-          {
-            $secret = SECRET_C;
-            $captcha=$_POST['g-recaptcha-response'];
-            if (!$captcha) {
-              //alert('<script language="javascript">alert("juas");</script>');
-              $errors[] = "Por favor verifica el captcha";
-            }
-            if (count($errors) == 0) {
-              # code...
-              $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$captcha");
 
-              $arr = json_decode($response, TRUE);
-
-              if($arr['success'])
-              {
 
                 if (isset($_POST['usuario']) && isset($_POST['clave'])) {
                   require_once "./controladores/loginControlador.php";
@@ -64,12 +43,6 @@ $page = PAGE;
                   echo $login->iniciar_sesion_controlador();
                 }
 
-              } else {
-                $errors[] = 'Error al comprobar Captcha';
-              }
-
-            }
-          }
           ?>
           <form action="" method="POST" autocomplete="off" class="logInForm">
             <h1>Inicio de Sesión</h1>
@@ -102,7 +75,7 @@ $page = PAGE;
             </div>
 
           </form>
-          <?php echo resultBlock($errors); ?>
+          <!-- <?php echo resultBlock($errors); ?> -->
         </section>
       </div>
 
@@ -110,7 +83,7 @@ $page = PAGE;
 
       <div id="register" class="animate form registration_form">
         <section class="login_content">
-          <img src="<?php echo SERVERURL; ?>vistas/contenidos/images/Gad.png"  style=" width: 150px height: 900px" class="logo_1"> 
+          <img src="<?php echo SERVERURL; ?>vistas/contenidos/images/Gad.png"  style=" width: 150px height: 900px" class="logo_1">
           <br>
           <br>
           <form action="" method="POST" autocomplete="off" class="RecuperarInForm">
